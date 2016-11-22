@@ -71,7 +71,7 @@ ol {
 
   a {
     @media #{$mobile-only} {
-      color: #B92B27;
+      color: #206be5;
       text-decoration: none;
     }
   }
@@ -99,24 +99,14 @@ ol {
   }
 }
 
-.job-header {
-  font-size: 15px;
-  padding: 0 40px 10px;
-
-  @media #{$mobile-only} {
-    padding: 60px 15px 25px 15px;
-    border-bottom: 2px dotted #206be5;
-  }
-}
-
 .loader {
-  background: #B92B27;
+  background: #206be5;
   -webkit-animation: load1 1s infinite ease-in-out;
   animation: load1 1s infinite ease-in-out;
   width: 1em;
   height: 4em;
   &:before, &:after {
-    background: #B92B27;
+    background: #206be5;
     -webkit-animation: load1 1s infinite ease-in-out;
     animation: load1 1s infinite ease-in-out;
     width: 1em;
@@ -129,8 +119,8 @@ ol {
   }
   &:before {
     left: -1.5em;
-    -webkit-animation-delay: -0.32s;
-    animation-delay: -0.32s;
+    -webkit-animation-delay: -1.32s;
+    animation-delay: -1.32s;
   }
 }
 
@@ -146,7 +136,7 @@ ol {
 }
 
 .loader {
-  color: #B92B27;
+  color: #206be5;
   text-indent: -9999em;
   margin: 20px 20px;
   position: relative;
@@ -154,8 +144,8 @@ ol {
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
+  -webkit-animation-delay: -1.16s;
+  animation-delay: -1.16s;
   &:after {
     left: 1.5em;
   }
