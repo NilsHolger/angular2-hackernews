@@ -1,0 +1,37 @@
+<div class="main-content">
+    <div class="loading-section"*ngIf="!item">
+      <!-- you can add a loading indicator here if you want to :) -->
+    </div>
+<div *ngIf="item" class="item">
+          <div class="mobile item-header">
+              <!-- markup that only shows on mobile to give the app a responsive mobile feel -->
+          </div>
+          <div class="laptop" [class.item-header]="item.comments_count > 0 || item.type === 'job'" [class.header-margin]="item.text">
+            <p>
+              <a class="title" href="{{item.url}}">
+                {{item.url}}
+              </a>
+              <span *ngIf="item.domain" class="domain">{{item.domain}}</span>
+            </p>
+            <div class="subtext">
+                <span>
+                  {{item.points}} points by <a href="">{{item.user}}</a>
+                </span>
+                <span>
+                  {{item.time_ago}}
+                <span> |
+                <a [routerLink]="['/item', item.id]">
+                <span *ngIf="item.comments_count !== 0">
+                <span *ngIf="item.comments_count === 1">comments</span>
+                <span *ngIf="item.comments_count > 1">comments</span>
+                </span>
+                <span *ngIf="item.comments_counts === 0">discuss</span>
+                </a>
+                </span>
+                </span>
+            </div>
+          </div>
+          <p class="subject" [innerHTML]="item.comment"></p>
+          <app-comment-tree [commentTree]="item.comments"></app-comment-tree>
+      </div>
+</div>
